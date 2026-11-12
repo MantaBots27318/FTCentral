@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FTC Central | FTC scouting, events and team tools</title>
 <meta name="description" content="Look up any FTC team's record, OPR and awards, find upcoming BIOBUZZ events, and keep scouting notes for alliance selection. Built by the MantaBots, FTC Team 27318.">
-<link rel="canonical" href="https://ftc-central.org/">
+<link rel="canonical" href="https://ftccentral.org/">
 <meta name="theme-color" content="#F4EFE3">
 <script>try{var t=localStorage.getItem('ftcentral.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FTC Central">
 <meta property="og:title" content="FTC Central: scouting, events and team tools for FTC teams">
 <meta property="og:description" content="Live team stats from FTC Scout, every upcoming BIOBUZZ event, and a scouting list that stays on your device. Built by FTC Team 27318, the MantaBots.">
-<meta property="og:url" content="https://ftc-central.org/">
-<meta property="og:image" content="https://ftc-central.org/og-image.png">
+<meta property="og:url" content="https://ftccentral.org/">
+<meta property="og:image" content="https://ftccentral.org/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The FTC Central logo and the line: Team stats, upcoming events and scouting lists for FTC teams, in one place.">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FTC Central","url":"https://ftc-central.org/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FTC Central","url":"https://ftccentral.org/"}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='17' fill='%2306727E'/%3E%3Cg fill='%23fff' stroke='%23fff' stroke-width='3.6' stroke-linecap='round'%3E%3Cpath d='M32 32V15M32 32 46.7 40.5M32 32 17.3 40.5' fill='none'/%3E%3Ccircle cx='32' cy='15' r='4.6' stroke='none'/%3E%3Ccircle cx='46.7' cy='40.5' r='4.6' stroke='none'/%3E%3Ccircle cx='17.3' cy='40.5' r='4.6' stroke='none'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='7.5' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%2306727E'/%3E%3C/svg%3E">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://api.ftcscout.org" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <!--
-  FTC Central, by the MantaBots (FTC Team 27318). Live at https://ftc-central.org/
+  FTC Central, by the MantaBots (FTC Team 27318). Live at https://ftccentral.org/
   FIRST trademark rules this page follows: FIRST is always in capitals and italics, a FIRST mark (FIRST, FTC,
   game names) is never joined to another word, made plural or possessive, and its first use on a page gets its symbol.
   Team, match and event data comes from the FTC Scout GraphQL API (api.ftcscout.org).
@@ -553,7 +553,7 @@ const ALLIANCE_AWARDS = ['Winner', 'Finalist', 'DivisionWinner', 'DivisionFinali
 // (the reason this site is "FTC Central", not "FTCentral"), made plural or possessive, or hyphenated; and the first
 // time a mark appears on a page, in a heading and in body text, it gets its symbol.
 const SITE_NAME = 'FTC Central';
-const SITE_URL = 'https://ftc-central.org/';
+const SITE_URL = 'https://ftccentral.org/';
 const tm = sym => '<sup class="tm">' + sym + '</sup>';
 const MK = { FIRST: '<i>FIRST</i>', FIRST_R: '<i>FIRST</i>' + tm('®'), FTC_R: 'FTC' + tm('®'), R: tm('®'), TM: tm('™') };
 // Italicizes FIRST inside text that is already escaped (award names, event types, event names).
@@ -772,7 +772,7 @@ function gql(query, variables, ttl) {
 }
 function apiMessage(e) {
   switch (e && e.kind) {
-    case 'file': return SITE_NAME + ' was opened as a file, so FTC Scout blocks its requests. Open it from its web address instead: ftc-central.org';
+    case 'file': return SITE_NAME + ' was opened as a file, so FTC Scout blocks its requests. Open it from its web address instead: ftccentral.org';
     case 'timeout': return 'FTC Scout took too long to answer. Try again in a moment.';
     case 'network': return 'Could not reach FTC Scout. Check your internet connection and try again.';
     case 'graphql': return 'FTC Scout could not answer that request (' + (e.message || 'unknown error') + ').';
@@ -1815,7 +1815,7 @@ function sheetFoot(merged) {
     'OPR (offensive power rating) estimates how many points a team adds to its alliance in a match. Stats from FTC Scout.',
     'Season is where the OPR comes from: this season, or the team\'s most recent season if it hasn\'t played this one yet. World rank compares every team with stats that season.',
     'Game names in the Season column, like DECODE™ and INTO THE DEEP℠, are trademarks of FIRST®.',
-    'Exported from ' + SITE_NAME + ', ftc-central.org, on ' + fmtDay(todayStr()) + '.'
+    'Exported from ' + SITE_NAME + ', ftccentral.org, on ' + fmtDay(todayStr()) + '.'
   ];
 }
 // Google Sheets keeps bold headers, colors and line breaks when you paste an HTML table.
